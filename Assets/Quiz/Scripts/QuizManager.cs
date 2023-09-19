@@ -19,7 +19,7 @@ public class QuizManager : MonoBehaviour
     //questions data
     private List<Question> questions;
     //current question data
-    private Question selectedQuetion = new Question();
+    private Question selectedQuestion = new Question();
     private int gameScore;
     private int lifesRemaining;
     private float currentTime;
@@ -55,10 +55,11 @@ public class QuizManager : MonoBehaviour
     {
         //get the random number
         int val = UnityEngine.Random.Range(0, questions.Count);
-        //set the selectedQuetion
-        selectedQuetion = questions[val];
+        //set the selectedQuestion
+        selectedQuestion = questions[val];
+        print(selectedQuestion);
         //send the question to quizGameUI
-        quizGameUI.SetQuestion(selectedQuetion);
+        quizGameUI.SetQuestion(selectedQuestion);
 
         questions.RemoveAt(val);
     }
@@ -96,7 +97,7 @@ public class QuizManager : MonoBehaviour
         bool correct = false;
         //if selected answer is similar to the correctAns
         if (gameMode) {
-            if ((selectedQuetion.correctAns == selectedOption))
+            if ((selectedQuestion.correctAns == selectedOption))
             {
                 //Yes, Ans is correct
                 correctAnswerCount++;
@@ -119,7 +120,7 @@ public class QuizManager : MonoBehaviour
         }
         else
         {
-            if ((selectedQuetion.correctAns != selectedOption))
+            if ((selectedQuestion.correctAns != selectedOption))
             {
                 //Yes, Ans is correct
                 correctAnswerCount++;

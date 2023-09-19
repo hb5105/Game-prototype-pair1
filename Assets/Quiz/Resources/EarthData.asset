@@ -10,62 +10,55 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f611d797432e3f846885b2b12fde5f35, type: 3}
-  m_Name: BirdData
+  m_Name: EarthData
   m_EditorClassIdentifier: 
-  categoryName: Bird
+  categoryName: Earth
   questions:
-  - questionInfo: What is the fastest bird on two legs?
+  - questionInfo: The Earth's equator is an imaginary line that divides the planet
+      into the Northern Hemisphere and the Southern Hemisphere.
     questionType: 0
     questionImage: {fileID: 0}
     audioClip: {fileID: 0}
     videoClip: {fileID: 0}
     options:
-    - Chicken
-    - Ostrich
-    - Kiwi
-    - Crow
-    correctAns: Ostrich
-  - questionInfo: What is New Zealand's national bird?
+    - True
+    - False
+    correctAns: True
+  - questionInfo: The Earth's atmosphere is primarily composed of oxygen, making
+      it the most abundant gas.
     questionType: 0
     questionImage: {fileID: 0}
     audioClip: {fileID: 0}
     videoClip: {fileID: 0}
     options:
-    - Kiwi
-    - Penguins
-    - Bat
-    - Duck
-    correctAns: Kiwi
-  - questionInfo: Which bird can't walk on legs?
+    - True
+    - False
+    correctAns: False
+  - questionInfo: Earth's largest ocean, the Pacific Ocean, covers more area than
+      all the landmasses on Earth combined.
     questionType: 0
     questionImage: {fileID: 0}
     audioClip: {fileID: 0}
     videoClip: {fileID: 0}
     options:
-    - Capon
-    - Ravens
-    - Hummingbird
-    - Bluebird
-    correctAns: Hummingbird
-  - questionInfo: Which bird cannot fly?
+    - True
+    - False
+    correctAns: True
+  - questionInfo: Earth is the only planet in our solar system known to support life.
     questionType: 0
     questionImage: {fileID: 0}
     audioClip: {fileID: 0}
     videoClip: {fileID: 0}
     options:
-    - Chicken
-    - Crow
-    - Sparrow
-    - Owl
-    correctAns: Chicken
-  - questionInfo: Emperor, Rock Hopper and jackass are all types of what?
+    - True
+    - False
+    correctAns: True
+  - questionInfo: The Great Wall of China is visible from space with the naked eye.
     questionType: 0
     questionImage: {fileID: 0}
     audioClip: {fileID: 0}
     videoClip: {fileID: 0}
     options:
-    - Dodo
-    - Penguins
-    - Albatross
-    - Crow
-    correctAns: Penguins
+    - True
+    - False
+    correctAns: False

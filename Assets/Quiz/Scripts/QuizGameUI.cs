@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class QuizGameUI : MonoBehaviour
 {
@@ -10,14 +11,14 @@ public class QuizGameUI : MonoBehaviour
     [SerializeField] private QuizManager quizManager;               //ref to the QuizManager script
     [SerializeField] private CategoryBtnScript categoryBtnPrefab;
     [SerializeField] private GameObject scrollHolder;
-    [SerializeField] private Text scoreText, timerText;
+    [SerializeField] private TextMeshProUGUI scoreText, timerText;
     [SerializeField] private List<Image> lifeImageList;
     [SerializeField] private GameObject gameOverPanel, mainMenu, gamePanel;
     [SerializeField] private Color correctCol, wrongCol, normalCol; //color of buttons
     [SerializeField] private Image questionImg;                     //image component to show image
     [SerializeField] private UnityEngine.Video.VideoPlayer questionVideo;   //to show video
     [SerializeField] private AudioSource questionAudio;             //audio source for audio clip
-    [SerializeField] private Text questionInfoText;                 //text to show question
+    [SerializeField] private TextMeshProUGUI questionInfoText;                 //text to show question
     [SerializeField] private List<Button> options;                  //options button reference
 #pragma warning restore 649
 
@@ -25,8 +26,8 @@ public class QuizGameUI : MonoBehaviour
     private Question question;          //store current question data
     private bool answered = false;      //bool to keep track if answered or not
 
-    public Text TimerText { get => timerText; }                     //getter
-    public Text ScoreText { get => scoreText; }                     //getter
+    public TextMeshProUGUI TimerText { get => timerText; }                     //getter
+    public TextMeshProUGUI ScoreText { get => scoreText; }                     //getter
     public GameObject GameOverPanel { get => gameOverPanel; }                     //getter
 
     private void Start()
@@ -47,6 +48,7 @@ public class QuizGameUI : MonoBehaviour
     /// <param name="question"></param>
     public void SetQuestion(Question question)
     {
+        print(question.questionInfo.ToString());
         //set the question
         this.question = question;
         //check for questionType
@@ -83,7 +85,7 @@ public class QuizGameUI : MonoBehaviour
                 break;
         }
 
-        questionInfoText.text = question.questionInfo;                      //set the question text
+        questionInfoText.text = question.questionInfo.ToString();                      //set the question text
 
         //suffle the list of options
         List<string> ansOptions = ShuffleList.ShuffleListItems<string>(question.options);
@@ -92,8 +94,8 @@ public class QuizGameUI : MonoBehaviour
         for (int i = 0; i < options.Count; i++)
         {
             //set the child text
-            options[i].GetComponentInChildren<Text>().text = ansOptions[i];
-            options[i].name = ansOptions[i];    //set the name of button
+            options[i].GetComponentInChildren<TextMeshProUGUI>().text = ansOptions[i].ToString();
+            options[i].name = ansOptions[i].ToString();    //set the name of button
             options[i].image.color = normalCol; //set color of button to normal
         }
 
