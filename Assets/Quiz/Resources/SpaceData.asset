@@ -10,62 +10,57 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f611d797432e3f846885b2b12fde5f35, type: 3}
-  m_Name: AnimalData
+  m_Name: SpaceData
   m_EditorClassIdentifier: 
-  categoryName: Animal
+  categoryName: Space
   questions:
-  - questionInfo: Which animal eats Deer?
+  - questionInfo: The phenomenon known as a "black hole" is a region in space where
+      nothing can escape, not even light.
     questionType: 0
     questionImage: {fileID: 0}
     audioClip: {fileID: 0}
     videoClip: {fileID: 0}
     options:
-    - Lion
-    - Elephant
-    - Goat
-    - Monkey
-    correctAns: Lion
-  - questionInfo: Which animal can climb trees?
+    - True
+    - False
+    correctAns: True
+  - questionInfo: Earth's moon, the Moon, is the largest natural satellite in the
+      solar system.
     questionType: 0
     questionImage: {fileID: 0}
     audioClip: {fileID: 0}
     videoClip: {fileID: 0}
     options:
-    - Zebra
-    - Bear
-    - Hyna
-    - Monkey
-    correctAns: Monkey
-  - questionInfo: Which of the following animal is Herbivorous?
+    - True
+    - False
+    correctAns: False
+  - questionInfo: The Milky Way galaxy is the only galaxy in the universe that contains
+      stars and planets.
     questionType: 0
     questionImage: {fileID: 0}
     audioClip: {fileID: 0}
     videoClip: {fileID: 0}
     options:
-    - Crocodile
-    - Moose
-    - Bear
-    - Panther
-    correctAns: Moose
-  - questionInfo: Who can walk on 2 legs?
+    - True
+    - False
+    correctAns: False
+  - questionInfo: Space travel at the speed of light is currently possible using
+      existing technology.
     questionType: 0
     questionImage: {fileID: 0}
     audioClip: {fileID: 0}
     videoClip: {fileID: 0}
     options:
-    - Dog
-    - Cat
-    - Human
-    - Turtle
-    correctAns: Human
-  - questionInfo: Slowest animal on the earth?
+    - True
+    - False
+    correctAns: False
+  - questionInfo: The moon Titan, one of Saturn's moons, has a thick atmosphere primarily
+      composed of nitrogen.
     questionType: 0
     questionImage: {fileID: 0}
     audioClip: {fileID: 0}
     videoClip: {fileID: 0}
     options:
-    - Cheeta
-    - Sloth
-    - Leapord
-    - Tortois
-    correctAns: Sloth
+    - True
+    - False
+    correctAns: True
